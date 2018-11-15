@@ -81,7 +81,7 @@ class HipchatMessage(NotifyPlugin):
                 color=COLORS['ALERT'],
             )
 
-    def notify_users(self, group, event, fail_silently=False):
+    def notify_users(self, group, event, fail_silently=False, **kwargs):
         project = event.project
         token = self.get_option('token', project)
         room = self.get_option('room', project)
