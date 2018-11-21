@@ -99,7 +99,7 @@ class HipchatMessage(NotifyPlugin):
                 message='[%(level)s]%(project_name)s %(message)s [<a href="%(link)s">view</a>]' % {
                     'level': escape(level),
                     'project_name': (' <strong>%s</strong>' % escape(project.name)).encode('utf-8') if include_project_name else '',
-                    'message': escape(event.error()),
+                    'message': escape(event.title),
                     'link': escape(link),
                 },
                 notify=notify,
